@@ -16,3 +16,7 @@ def longest_subarray_sum_k(arr, k):
             first[total] = i
 
     return best
+
+
+
+#time complexity-o(n) and space is o(1)

@@ -1,21 +1,27 @@
-def totalFruit(fruits):
-    counts = {}                          # fruit type count INSIDE the window
-    left = 0
-    best = 0
+class Solution:
+    def totalFruit(self, fruits: list[int]) -> int:
+        counts={}           # fruit type count INSIDE the window
+        left,result=0,0
 
-    for right in range(len(fruits)):
-        f = fruits[right]
-        counts[f] = counts.get(f, 0) + 1     #  expand and add the counts of each fruit
+        for right in range(len(fruits)):
+            f=fruits[right]
+            counts[f]=counts.get(f,0)+1
 
-        while len(counts) > 2:              
-            g = fruits[left]
-            counts[g] -= 1                   #  shrink
-            if counts[g] == 0:
-                del counts[g]                
-            left += 1
-
-        length = right - left + 1           
-        if length > best:
-            best = length
-
-    return best
+            while len(counts)>2: #  hasp map used to assign key value pairs ,counting frequency of each fruit type
+                g=fruits[left]
+                counts[g]-=1           
+                if counts[g]==0:
+                    del counts[g]         #del if no value left
+                left+=1
+            length=right-left+1
+            if length>result:
+                result=length
+        return result
+    
+    
+    
+    #time complexity-o(n) and space is o(1)
+    
+    
+    
+            
