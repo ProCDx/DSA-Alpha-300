@@ -15,3 +15,8 @@ class Solution:
         return result
 
 
+#time complexity-o(n) and space is o(1)
+#Pattern: variable-size sliding window.
+#Trigger: contiguous subarray, all positives, and we want the shortest or longest one satisfying a sum condition.
+#Why it works: positives mean adding grows the sum and removing shrinks it. With negatives this breaks, which is why
+#              Problem 2 needs a different approach.
