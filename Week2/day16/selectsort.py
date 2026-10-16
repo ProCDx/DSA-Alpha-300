@@ -1,5 +1,5 @@
-class solution:
-    def selection_sort(arr):
+
+def selection_sort(arr):
         n=len(arr)
         for i in range(n-1):
             min_index=i
