@@ -8,6 +8,7 @@ class Solution:
             else:
                 result+=ch
         return result
+#Time complexity:O(n^2),space complexity:O(n)
 #Optimal:
 class Solution:
     def toLowerCase(self, s: str) -> str:
@@ -17,4 +18,5 @@ class Solution:
                 ch=chr(ord(ch)+32)
             result.append(ch)
         return "".join(result)
+#Time complexity:O(n),space complexity:O(n)
     
